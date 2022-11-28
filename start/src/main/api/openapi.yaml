@@ -27,8 +27,8 @@ paths:
             schema:
               $ref: '#/components/schemas/Contact'
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
@@ -60,7 +60,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ContactOptional'
+              $ref: '#/components/schemas/ContactUpdate'
       responses:
         '200':
           description: OK
@@ -177,17 +177,13 @@ components:
       - lastName
       - extension
       - zipCode
-    ContactOptional:
+    ContactUpdate:
       type: object
       properties:
         firstName:
           type: string
           maxLength: 10
           example: Fred
-        lastName:
-          type: string
-          maxLength: 10
-          example: Smith
         extension:
           type: string
           maxLength: 10
@@ -196,6 +192,10 @@ components:
           type: string
           maxLength: 7
           example: 10504
+      required:
+      - firstName
+      - extension
+      - zipCode
   parameters:
     lastName:
       name: lastName
