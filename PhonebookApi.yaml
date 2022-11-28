@@ -19,6 +19,13 @@ paths:
       summary: Add a contact to the phonebook
       description: Uses the phonebook IMS Transaction z/OS asset
       operationId: phonebookContactsPost
+      requestBody:
+        description: The contact to add to the phonebook.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Contact'
       responses:
         '200':
           description: OK
@@ -47,6 +54,13 @@ paths:
       operationId: phonebookContactsLastNamePut
       parameters:
         - $ref: '#/components/parameters/lastName'
+      requestBody:
+        description: The fields to update in the contact in the phonebook.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContactOptional'
       responses:
         '200':
           description: OK
@@ -140,6 +154,30 @@ components:
       example:
         message: A message describing the error
     Contact:
+      type: object
+      properties:
+        firstName:
+          type: string
+          maxLength: 10
+          example: Fred
+        lastName:
+          type: string
+          maxLength: 10
+          example: Smith
+        extension:
+          type: string
+          maxLength: 10
+          example: 000-0000
+        zipCode:
+          type: string
+          maxLength: 7
+          example: 10504
+      required:
+      - firstName
+      - lastName
+      - extension
+      - zipCode
+    ContactOptional:
       type: object
       properties:
         firstName:
