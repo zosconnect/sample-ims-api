@@ -33,8 +33,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Contact'
-        '400':
-          description: Bad Request
+        '409':
+          description: Conflict
           content:
             application/json:
               schema:
@@ -68,8 +68,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Contact'
-        '400':
-          description: Bad Request
+        '404':
+          description: Not Found
           content:
             application/json:
               schema:
@@ -132,8 +132,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Contact'
-        '400':
-          description: Bad Request
+        '404':
+          description: Not Found
           content:
             application/json:
               schema:
