@@ -3,6 +3,19 @@
     <features>
         <feature>zosconnect:ims-1.0</feature>
     </features>
-    
-    <!-- IMS connections -->
+
+    <zosconnect_imsConnection id="imsConn"
+        connectionFactoryRef="imsConnectionFactory"
+        imsDatastoreName="IMS1"
+        interactionTimeout="-1"
+        imsConnectTimeout="30000"
+        commitMode="1"
+        syncLevel="0"
+        imsConnectCodepage="Cp1047" />
+
+    <connectionFactory id="imsConnectionFactory" containerAuthDataRef="imsCredentials">
+        <properties.gmoa hostName="${IMS_HOST}" portNumber="${IMS_PORT}" />
+    </connectionFactory>
+
+    <authData id="imsCredentials" user="${IMS_USER}" password="${IMS_PASSWORD}" />
 </server>
