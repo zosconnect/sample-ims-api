@@ -1,4 +1,8 @@
-<server>
-    <!-- IMS feature -->
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="IMS configuration">
+    <features>
+        <feature>zosconnect:ims-1.0</feature>
+    </features>
+    
     <!-- IMS connections -->
 </server>
