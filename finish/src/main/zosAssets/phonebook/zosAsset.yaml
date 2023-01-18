@@ -1,8 +1,8 @@
 ---
 version: 1.0
 type: "imsTransaction-1.0"
-description: "EDIT"
+description: ""
 providerProperties:
   language: "COBOL"
   transactionCode: "EDIT"
-  connectionRef: "alternative"
+  connectionRef: "imsConn"
