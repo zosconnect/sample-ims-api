@@ -1,0 +1,16 @@
+---
+mappings:
+- message:
+    mappings:
+    - IVTNO_INPUT-MSG:
+        mappings:
+        - IN-COMMAND:
+            template: "UPDATE"
+        - IN-LAST-NAME:
+            template: "{{$pathParameters.lastName}}"
+        - IN-FIRST-NAME:
+            template: "{{$body.firstName}}"
+        - IN-EXTENSION:
+            template: "{{$body.extension}}"
+        - IN-ZIP-CODE:
+            template: "{{$body.zipCode}}"

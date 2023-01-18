@@ -1,0 +1,7 @@
+---
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "The contact {{$apiRequest.body.lastName}} already exists."
+version: 1

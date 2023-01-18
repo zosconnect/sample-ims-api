@@ -1,0 +1,214 @@
+openapi: 3.0.0
+info:
+  title: Phonebook
+  description: Manage phonebook contacts through an API for IMS.
+  version: '1.1'
+  license:
+    name: Apache-2.0
+    url: https://opensource.org/licenses/Apache-2.0
+servers:
+- url: /
+security:
+  - BasicAuth: []
+  - BearerAuth: []
+paths:
+  /phonebook/contacts:
+    post:
+      tags:
+        - Contacts
+      summary: Add a contact to the phonebook
+      description: Uses the phonebook IMS Transaction z/OS asset
+      operationId: phonebookContactsPost
+      requestBody:
+        description: The contact to add to the phonebook.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Contact'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        '409':
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /phonebook/contacts/{lastName}:
+    put:
+      tags:
+        - Contacts
+      summary: Update a contact in the phonebook
+      description: Uses the phonebook IMS Transaction z/OS asset
+      operationId: phonebookContactsLastNamePut
+      parameters:
+        - $ref: '#/components/parameters/lastName'
+      requestBody:
+        description: The fields to update in the contact in the phonebook.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContactUpdate'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      tags:
+        - Contacts
+      summary: Display a contact
+      description: Uses the phonebook IMS Transaction z/OS asset
+      operationId: phonebookContactsLastNameGet
+      parameters:
+        - $ref: '#/components/parameters/lastName'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                example:
+                  message: Contact could not be found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                example:
+                  message: A message describing the error
+    delete:
+      tags:
+        - Contacts
+      summary: Delete a contact in the phonebook
+      description: Uses the phonebook IMS Transaction z/OS asset
+      operationId: phonebookContactsLastNameDelete
+      parameters:
+        - $ref: '#/components/parameters/lastName'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+      example:
+        message: A message describing the error
+    Contact:
+      type: object
+      properties:
+        firstName:
+          type: string
+          maxLength: 10
+          example: Fred
+        lastName:
+          type: string
+          maxLength: 10
+          example: Smith
+        extension:
+          type: string
+          maxLength: 10
+          example: 000-0000
+        zipCode:
+          type: string
+          maxLength: 7
+          example: 10504
+      required:
+      - firstName
+      - lastName
+      - extension
+      - zipCode
+    ContactUpdate:
+      type: object
+      properties:
+        firstName:
+          type: string
+          maxLength: 10
+          example: Fred
+        extension:
+          type: string
+          maxLength: 10
+          example: 000-0000
+        zipCode:
+          type: string
+          maxLength: 7
+          example: 10504
+      required:
+      - firstName
+      - extension
+      - zipCode
+  parameters:
+    lastName:
+      name: lastName
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

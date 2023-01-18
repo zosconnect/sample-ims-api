@@ -1,0 +1,10 @@
+---
+mappings:
+- message:
+    mappings:
+    - IVTNO_INPUT-MSG:
+        mappings:
+        - IN-LAST-NAME:
+            template: "{{$pathParameters.lastName}}"
+        - IN-COMMAND:
+            template: "DISPLAY"

@@ -1,0 +1,14 @@
+---
+version: 1
+response_201.yaml:
+  condition: "$contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-MESSAGE\"\
+    , 'ENTRY WAS ADDED') = true"
+  httpStatusCode: 200
+response_409.yaml:
+  condition: "($contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-MESSAGE\"\
+    , 'ENTRY EXISTS') = true) or ($contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\"\
+    .\"OUT-MESSAGE\", \"ADDITION OF ENTRY HAS FAILED\") = true)"
+  httpStatusCode: 409
+response_500.yaml:
+  condition: true
+  httpStatusCode: 500

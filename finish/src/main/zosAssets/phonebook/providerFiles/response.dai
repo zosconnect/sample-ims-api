@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" direction="0">
+    <message id="1">
+        <segment id="1" name="IVTNO_OUTPUT" originalName="IVTNO_OUTPUT">
+            <field name="IVTNO_OUTPUT-MSG" originalName="IVTNO_OUTPUT-MSG" included="Y" path="IVTNO_OUTPUT-MSG" fileName="IMSPHBK.cpy" structureIndex="0" structSrcFileName="IVTNO_OUTPUT-MSG.cpy" srcLine="01 IVTNO_OUTPUT-MSG.">
+                <startPos>1</startPos>
+                <bytes>93</bytes>
+                <maxBytes>93</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="OUT-LL" originalName="OUT-LL" included="Y" path="IVTNO_OUTPUT-MSG.OUT-LL" srcLine="02 OUT-LL PIC S9(3) USAGE COMP VALUE 0.">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="3"/>
+                </field>
+                <field name="OUT-ZZ" originalName="OUT-ZZ" included="Y" path="IVTNO_OUTPUT-MSG.OUT-ZZ" srcLine="02 OUT-ZZ PIC S9(3) USAGE COMP VALUE 0.">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="3"/>
+                </field>
+                <field name="OUT-MESSAGE" originalName="OUT-MESSAGE" included="Y" path="IVTNO_OUTPUT-MSG.OUT-MESSAGE" srcLine="02 OUT-MESSAGE PIC X(40) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>5</startPos>
+                    <bytes>40</bytes>
+                    <maxBytes>40</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="OUT-COMMAND" originalName="OUT-COMMAND" included="Y" path="IVTNO_OUTPUT-MSG.OUT-COMMAND" srcLine="02 OUT-COMMAND PIC X(8) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>45</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="OUT-LAST-NAME" originalName="OUT-LAST-NAME" included="Y" path="IVTNO_OUTPUT-MSG.OUT-LAST-NAME" srcLine="02 OUT-LAST-NAME PIC X(10) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>53</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="OUT-FIRST-NAME" originalName="OUT-FIRST-NAME" included="Y" path="IVTNO_OUTPUT-MSG.OUT-FIRST-NAME" srcLine="02 OUT-FIRST-NAME PIC X(10) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>63</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="OUT-EXTENSION" originalName="OUT-EXTENSION" included="Y" path="IVTNO_OUTPUT-MSG.OUT-EXTENSION" srcLine="02 OUT-EXTENSION PIC X(10) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>73</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="OUT-ZIP-CODE" originalName="OUT-ZIP-CODE" included="Y" path="IVTNO_OUTPUT-MSG.OUT-ZIP-CODE" srcLine="02 OUT-ZIP-CODE PIC X(7) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>83</startPos>
+                    <bytes>7</bytes>
+                    <maxBytes>7</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="OUT-SEGNO" originalName="OUT-SEGNO" included="Y" path="IVTNO_OUTPUT-MSG.OUT-SEGNO" srcLine="02 OUT-SEGNO PIC X(4) USAGE DISPLAY VALUE SPACES.">
+                    <startPos>90</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>
