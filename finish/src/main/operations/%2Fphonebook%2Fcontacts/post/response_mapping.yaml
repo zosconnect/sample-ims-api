@@ -3,7 +3,7 @@ version: 1
 response_201.yaml:
   condition: "$contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-MESSAGE\"\
     , 'ENTRY WAS ADDED') = true"
-  httpStatusCode: 200
+  httpStatusCode: 201
 response_409.yaml:
   condition: "($contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-MESSAGE\"\
     , 'ENTRY EXISTS') = true) or ($contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\"\
