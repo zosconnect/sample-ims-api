@@ -4,5 +4,5 @@ type: "imsTransaction-1.0"
 description: ""
 providerProperties:
   language: "COBOL"
-  transactionCode: "EDIT"
+  transactionCode: "IVTNO"
   connectionRef: "imsConn"
