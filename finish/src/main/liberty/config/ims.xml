@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server description="IMS configuration">
-    <features>
+    <featureManager>
         <feature>zosconnect:ims-1.0</feature>
-    </features>
+    </featureManager>
 
     <zosconnect_imsConnection id="imsConn"
         connectionFactoryRef="imsConnectionFactory"
