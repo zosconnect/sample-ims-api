@@ -1,0 +1,13 @@
+---
+version: 1
+response_200.yaml:
+  condition: "$contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-MESSAGE\"\
+    , 'DELETED') = true"
+  httpStatusCode: 200
+response_404.yaml:
+  condition: "$contains($zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-MESSAGE\"\
+    , 'NOT FOUND') = true"
+  httpStatusCode: 404
+response_500.yaml:
+  condition: true
+  httpStatusCode: 500

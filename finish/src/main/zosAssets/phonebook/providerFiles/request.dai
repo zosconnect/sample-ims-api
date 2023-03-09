@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" direction="0">
+    <message id="1">
+        <segment id="1" name="IVTNO_INPUT" originalName="IVTNO_INPUT">
+            <field name="IVTNO_INPUT-MSG" originalName="IVTNO_INPUT-MSG" included="Y" path="IVTNO_INPUT-MSG" fileName="IMSPHBK.cpy" structureIndex="0" structSrcFileName="IVTNO_INPUT-MSG.cpy" srcLine="01 IVTNO_INPUT-MSG.">
+                <startPos>1</startPos>
+                <bytes>59</bytes>
+                <maxBytes>59</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="IN-LL" originalName="IN-LL" included="Y" path="IVTNO_INPUT-MSG.IN-LL" srcLine="02 IN-LL PIC S9(3) USAGE COMP.">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="3"/>
+                </field>
+                <field name="IN-ZZ" originalName="IN-ZZ" included="Y" path="IVTNO_INPUT-MSG.IN-ZZ" srcLine="02 IN-ZZ PIC S9(3) USAGE COMP.">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="3"/>
+                </field>
+                <field name="IN-TRANCDE" originalName="IN-TRANCDE" included="Y" path="IVTNO_INPUT-MSG.IN-TRANCDE" srcLine="02 IN-TRANCDE PIC X(10) USAGE DISPLAY.">
+                    <startPos>5</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="IN-COMMAND" originalName="IN-COMMAND" included="Y" path="IVTNO_INPUT-MSG.IN-COMMAND" srcLine="02 IN-COMMAND PIC X(8) USAGE DISPLAY.">
+                    <startPos>15</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="IN-LAST-NAME" originalName="IN-LAST-NAME" included="Y" path="IVTNO_INPUT-MSG.IN-LAST-NAME" srcLine="02 IN-LAST-NAME PIC X(10) USAGE DISPLAY.">
+                    <startPos>23</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="IN-FIRST-NAME" originalName="IN-FIRST-NAME" included="Y" path="IVTNO_INPUT-MSG.IN-FIRST-NAME" srcLine="02 IN-FIRST-NAME PIC X(10) USAGE DISPLAY.">
+                    <startPos>33</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="IN-EXTENSION" originalName="IN-EXTENSION" included="Y" path="IVTNO_INPUT-MSG.IN-EXTENSION" srcLine="02 IN-EXTENSION PIC X(10) USAGE DISPLAY.">
+                    <startPos>43</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="IN-ZIP-CODE" originalName="IN-ZIP-CODE" included="Y" path="IVTNO_INPUT-MSG.IN-ZIP-CODE" srcLine="02 IN-ZIP-CODE PIC X(7) USAGE DISPLAY.">
+                    <startPos>53</startPos>
+                    <bytes>7</bytes>
+                    <maxBytes>7</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

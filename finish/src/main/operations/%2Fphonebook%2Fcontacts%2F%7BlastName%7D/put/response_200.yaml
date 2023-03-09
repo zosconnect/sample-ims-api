@@ -1,0 +1,16 @@
+---
+mappings:
+- body:
+    mappings:
+    - firstName:
+        template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-FIRST-NAME\"\
+          }}"
+    - lastName:
+        template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-LAST-NAME\"\
+          }}"
+    - extension:
+        template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-EXTENSION\"\
+          }}"
+    - zipCode:
+        template: "zip"
+version: 1

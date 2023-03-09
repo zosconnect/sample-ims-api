@@ -1,0 +1,94 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "type" : "object",
+  "properties" : {
+    "message" : {
+      "type" : "object",
+      "properties" : {
+        "IVTNO_OUTPUT-MSG" : {
+          "type" : "object",
+          "properties" : {
+            "OUT-LL" : {
+              "minimum" : -999,
+              "maximum" : 999,
+              "type" : "integer",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-LL PIC S9(3) USAGE COMP VALUE 0.",
+                "name" : "OUT-LL"
+              }
+            },
+            "OUT-ZZ" : {
+              "minimum" : -999,
+              "maximum" : 999,
+              "type" : "integer",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-ZZ PIC S9(3) USAGE COMP VALUE 0.",
+                "name" : "OUT-ZZ"
+              }
+            },
+            "OUT-MESSAGE" : {
+              "maxLength" : 40,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-MESSAGE PIC X(40) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-MESSAGE"
+              }
+            },
+            "OUT-COMMAND" : {
+              "maxLength" : 8,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-COMMAND PIC X(8) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-COMMAND"
+              }
+            },
+            "OUT-LAST-NAME" : {
+              "maxLength" : 10,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-LAST-NAME PIC X(10) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-LAST-NAME"
+              }
+            },
+            "OUT-FIRST-NAME" : {
+              "maxLength" : 10,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-FIRST-NAME PIC X(10) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-FIRST-NAME"
+              }
+            },
+            "OUT-EXTENSION" : {
+              "maxLength" : 10,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-EXTENSION PIC X(10) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-EXTENSION"
+              }
+            },
+            "OUT-ZIP-CODE" : {
+              "maxLength" : 7,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-ZIP-CODE PIC X(7) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-ZIP-CODE"
+              }
+            },
+            "OUT-SEGNO" : {
+              "maxLength" : 4,
+              "type" : "string",
+              "x-ibm-zcon-metadata" : {
+                "type" : "02 OUT-SEGNO PIC X(4) USAGE DISPLAY VALUE SPACES.",
+                "name" : "OUT-SEGNO"
+              }
+            }
+          }
+        }
+      }
+    },
+    "abendCode" : {
+      "type" : "string"
+    }
+  },
+  "description" : "General wrapper for IMS Transaction message z/OS Asset responses"
+}
