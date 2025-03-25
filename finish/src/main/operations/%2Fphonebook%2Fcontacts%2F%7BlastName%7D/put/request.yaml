@@ -1,16 +1,29 @@
 ---
+version: "1.2"
 mappings:
 - message:
     mappings:
     - IVTNO_INPUT-MSG:
+        required: false
+        nullable: false
         mappings:
         - IN-COMMAND:
+            required: false
+            nullable: false
             template: "UPDATE"
         - IN-LAST-NAME:
+            required: false
+            nullable: false
             template: "{{$pathParameters.lastName}}"
         - IN-FIRST-NAME:
+            required: false
+            nullable: false
             template: "{{$body.firstName}}"
         - IN-EXTENSION:
+            required: false
+            nullable: false
             template: "{{$body.extension}}"
         - IN-ZIP-CODE:
+            required: false
+            nullable: false
             template: "{{$body.zipCode}}"

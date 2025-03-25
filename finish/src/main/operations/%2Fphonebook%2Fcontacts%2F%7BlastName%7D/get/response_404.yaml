@@ -1,8 +1,10 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - message:
+        required: false
+        nullable: false
         template: "Contact with last name {{$apiRequest.pathParameters.lastName}}\
           \ was not found in phonebook."
-version: 1

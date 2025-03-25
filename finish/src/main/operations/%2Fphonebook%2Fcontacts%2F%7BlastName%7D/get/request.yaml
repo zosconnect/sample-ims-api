@@ -1,10 +1,17 @@
 ---
+version: "1.2"
 mappings:
 - message:
     mappings:
     - IVTNO_INPUT-MSG:
+        required: false
+        nullable: false
         mappings:
-        - IN-LAST-NAME:
-            template: "{{$pathParameters.lastName}}"
         - IN-COMMAND:
+            required: false
+            nullable: false
             template: "DISPLAY"
+        - IN-LAST-NAME:
+            required: false
+            nullable: false
+            template: "{{$pathParameters.lastName}}"
