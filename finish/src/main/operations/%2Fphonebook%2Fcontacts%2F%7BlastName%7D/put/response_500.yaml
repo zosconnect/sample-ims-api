@@ -1,8 +1,10 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - message:
+        required: false
+        nullable: false
         template: "{{$error.message}}{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\"\
           .\"OUT-MESSAGE\"}}"
-version: 1

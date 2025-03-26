@@ -1,17 +1,25 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - firstName:
+        required: true
+        nullable: false
         template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-FIRST-NAME\"\
           }}"
     - lastName:
+        required: true
+        nullable: false
         template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-LAST-NAME\"\
           }}"
     - extension:
+        required: true
+        nullable: false
         template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-EXTENSION\"\
           }}"
     - zipCode:
+        required: true
+        nullable: false
         template: "{{$zosAssetResponse.message.\"IVTNO_OUTPUT-MSG\".\"OUT-ZIP-CODE\"\
           }}"
-version: 1
